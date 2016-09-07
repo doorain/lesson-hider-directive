@@ -198,7 +198,7 @@ is that this controller can only apply to this directive. Knowing that this cont
 and `lessonService` just like we're used to.
 
 Since we're injecting `lessonService`, let's go add the function we need. Create a method named `getSchedule` that simply returns a GET request to your
-schedule.json (You probably haven't done an $http request to one of your own files before, but it works just the same. `return $http.get('schedule.json');`).
+schedule.json (You probably haven done an $http request to one of your own files before, but it works just the same. `return $http.get('schedule.json');`).
 
 Because we've injected `lessonService` into our directive's controller we can now access that function in the same way we are used to in other controllers.
 Let's assign the return value of `lessonService.getSchedule()` to a new value called `$scope.getSchedule`. You may have noticed that we still haven't called a
@@ -292,8 +292,7 @@ angular.module('directivePractice')
 
 First we will need to add a new property onto our scope object. Let's call this property `dayAlert:`. We will be passing this value a function, so remember that
 we want to use the `'&'` instead of the `'='`. Now that we have that property on our scope, we need to give it a value, so let's go back to our `lessonCtrl` and
-write a new function named `announceDay()`. This function will be nice and simple. It should take two parameters: lesson and day. It should alert `lesson + ' is
-active on ' + day + '.'`.
+write a new function named `announceDay()`. This function will be nice and simple. It should take two parameters: lesson and day. It should alert `lesson + ' is active on ' + day + '.'`.
 
 Our next step is to pass this new function to our directive. Don't forget that Angular will swap camelCase to snake-case in your html! The directive element
 inside your index.html should now look something like this:
@@ -337,4 +336,3 @@ prohibited. Excerpts and links may be used, provided that full and clear credit 
 content.
 
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250">
-
